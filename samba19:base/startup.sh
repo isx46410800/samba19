@@ -4,8 +4,6 @@
 # -------------------------------------
 #instalacio / preparacio
 /opt/docker/install.sh && echo "Install Ok"
-/usr/sbin/smbd && echo "smb Ok"
-/usr/sbin/nmbd && echo "nmb  Ok"
 
 # creacio usuaris
 useradd lial
