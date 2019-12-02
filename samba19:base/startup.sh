@@ -6,7 +6,7 @@
 /opt/docker/install.sh && echo "Install Ok"
 
 # creacio usuaris
-useradd lial
+useradd lila
 useradd roc
 useradd patipla
 useradd pla
