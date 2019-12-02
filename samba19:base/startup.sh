@@ -16,7 +16,6 @@ echo -e "patipla\npatipla" | smbpasswd -a patipla
 echo -e "pla\npla" | smbpasswd -a pla
 
 # activar els serveis
-/usr/sbin/smbd -d && echo "smb Ok"
-/usr/sbin/nmbd -d && echo "nmb  Ok"
-/bin/bash 
+/usr/sbin/smbd && echo "smb Ok"
+/usr/sbin/nmbd -F && echo "nmb  Ok"
 
