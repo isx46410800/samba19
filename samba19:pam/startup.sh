@@ -5,22 +5,14 @@
 #instalacio / preparacio
 /opt/docker/install.sh && echo "Install Ok"
 
-# creacio usuaris
-useradd local1
-useradd local2
-useradd local3
-useradd lila
-useradd roc
-useradd patipla
-useradd pla
-echo -e "lila\nlila" | smbpasswd -a lila
-echo -e "roc\nroc" | smbpasswd -a roc
-echo -e "patipla\npatipla" | smbpasswd -a patipla
-echo -e "pla\npla" | smbpasswd -a pla
-
-# activar els serveis
+# activar els serveis ldap
 /sbin/nscd && echo "nscd Ok"
 /sbin/nslcd && echo "nslcd Ok"
+
+# activar els serveis samba
 /usr/sbin/smbd && echo "smb Ok"
 /usr/sbin/nmbd && echo "nmb  Ok"
+
+# creacion de users samba dels users ldap, creando sus cuentas y directorios
+bash /opt/docker/usersSambaUnixLdap.sh
 
