@@ -11,8 +11,10 @@
 
 # activar els serveis samba
 /usr/sbin/smbd && echo "smb Ok"
-/usr/sbin/nmbd && echo "nmb  Ok"
 
 # creacion de users samba dels users ldap, creando sus cuentas y directorios
 bash /opt/docker/usersSambaUnixLdap.sh
+
+# servei per a detached
+/usr/sbin/nmbd -F
 
